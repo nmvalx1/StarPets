@@ -7,6 +7,7 @@ export default defineConfig({
   testDir: '.',
   timeout: 30_000,
   retries: process.env.CI ? 1 : 0,
+  fullyParallel: true,
   reporter: [['list'], ['html', { open: 'never' }]],
 
   use: {
@@ -18,6 +19,9 @@ export default defineConfig({
     {
       name: 'api',
       testMatch: /api\/tests\/.*\.spec\.ts/,
+      use: {
+        baseURL: process.env.API_BASE_URL,
+      },
     },
     {
       name: 'ui',

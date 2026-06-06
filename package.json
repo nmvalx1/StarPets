@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "playwright test",
     "tests": "playwright test",
     "test:api": "playwright test api/tests",
     "test:ui": "playwright test ui/tests",
@@ -12,8 +12,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "starpets api/ui autotests",
+  "engines": {
+    "node": ">=20"
+  },
   "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.2",
     "dotenv": "^17.4.2",
