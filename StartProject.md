@@ -13,12 +13,13 @@ cd StarPets
 cp .env.example .env
 npm ci
 
-npm run test:api ##запускает только апи тесты 
+npm run test:api ##запускает только апи тесты
+npm run test:ui ##запуск только ui тестов
 npm run test:ui-mode ##запускает браузер playwright
 ```
 
-.env в git не попадает — без него `API_BASE_URL` пустой и тесты упадут.
+.env в git не попадает — без него `API_BASE_URL` пустой и тесты упадут
 
 ## Примечания
 
-- JSONPlaceholder — mock API: не валидирует поля и не поддерживает auth/идемпотентность 
+- JSONPlaceholder не валидирует поля и не поддерживает auth/идемпотентность 

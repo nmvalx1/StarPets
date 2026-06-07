@@ -1,4 +1,4 @@
-import { expect, test } from "../../../setup/fixtures";
+import { expect, test } from "../../fixtures";
 import { STATUS_CODES } from "../../data/enums/status-codes.enum";
 import generateCreateData from "../../data/generate-data-create.data";
 import { createPostResponseSchema } from "../../data/schemes/post.schema";
