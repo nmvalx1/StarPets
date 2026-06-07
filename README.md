@@ -26,4 +26,31 @@
 - Сколько было покупок и скольк "списалось" петов с остатков. Если было 1000 покупок а списалось 990 петов, то 10 шт где то потеряли/сообщение в очереди и тд.
 - мониторинг через dashboard или grafana /grafana loki
 
+# StarPets:
+
+## Требования
+- Node.js **20+**
+- npm **10+**
+
+## Старт:
+
+```bash
+git clone git@github.com:nmvalx1/StarPets.git
+cd StarPets
+
+cp .env.example .env
+npm ci
+
+npm run test:api ##запускает только апи тесты
+npm run test:ui ##запуск только ui тестов
+npm run test:ui-mode ##запускает браузер playwright
+```
+
+.env в git не попадает — без него `API_BASE_URL` пустой и тесты упадут
+
+## Примечания
+
+- JSONPlaceholder не валидирует поля и не поддерживает auth/идемпотентность 
+
+
 
